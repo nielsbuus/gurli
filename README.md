@@ -18,7 +18,7 @@ Removes the specified key (if present) from the Gurli object.
 #### clearParams()
 Removes any query parameters from the Gurli object.
 
-#### setBaseUrl(newUrl)
+#### setBaseURL(newURL)
 Replaces the part of the url before the question mark, but retains query parameters.
 
 #### toURL()

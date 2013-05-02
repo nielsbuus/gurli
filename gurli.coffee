@@ -1,6 +1,6 @@
 class Gurli
   constructor: () ->
-    @baseUrl = window.location.href.split("?")[0]
+    @baseURL = window.location.href.split("?")[0]
     paramsArray = window.location.href.split("?")[1]
     paramsArray = if paramsArray then paramsArray.split("&") else []
     @params = {}
@@ -21,11 +21,11 @@ class Gurli
     @params = []
     return
 
-  setBaseUrl: (newUrl) ->
-    @baseUrl = encodeURI(newUrl)
+  setBaseURL: (newURL) ->
+    @baseURL = encodeURI(newURL)
 
   toURL: ->
-    urlString = @baseUrl + "?"
+    urlString = @baseURL + "?"
     for property of @params
       urlString = urlString + encodeURIComponent(property) + "=" + encodeURIComponent(@params[property]) + "&"
     urlString.slice(0, -1)
